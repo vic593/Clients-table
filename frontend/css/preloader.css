@@ -1,0 +1,27 @@
+.preloader {
+/* display: block; */
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 300px;
+}
+
+
+.preloader svg {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  animation: spinner .3s ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spinner {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

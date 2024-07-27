@@ -1,0 +1,152 @@
+/* шапка table */
+.clients {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.clients__heading {
+  margin: 0;
+  margin-bottom: 26px;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-mine-shaft);
+}
+
+.clients__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.clients__wrapper {
+  margin-bottom: 40px;
+  overflow: auto;
+}
+
+.display-info {
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 8px;
+}
+
+.thead__tr {
+  display: flex;
+  text-align: left;
+}
+
+.display-info__item {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--color-silver-chalice);
+}
+
+.display-info__item-id {
+  margin-right: 10px;
+  max-width: 72px;
+  width: 100%;
+  color: var(--color-heliotrope);
+  background-position: left 15px center;
+}
+
+.display-info__item-fio {
+  display: flex;
+  max-width: 359px;
+  width: 100%;
+  margin-right: 10px;
+  background-position: left 142px center;
+
+}
+
+.display-fio__span {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  font-weight: 600;
+  font-size: 10px;
+  color: var(--color-heliotrope);
+}
+
+.display-info__item-create {
+  display: flex;
+  max-width: 165px;
+  width: 100%;
+  margin-right: 10px;
+  background-position: right 19px center;
+}
+
+.display-info__item-update {
+  display: flex;
+  max-width: 165px;
+  width: 100%;
+  margin-right: 10px;
+  background-position: right 21px center;
+}
+
+.display-info__item-id,
+.display-info__item-fio,
+.display-info__item-create,
+.display-info__item-update {
+  cursor: pointer;
+  user-select: none;
+}
+
+.display-info__item-contacts {
+  display: flex;
+  max-width: 140px;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.clients__btn {
+  display: flex;
+  align-self: center;
+  padding: 13px 26px;
+  font-weight: 600;
+  color: var(--color-heliotrope);
+  border: 1px solid var(--color-heliotrope);
+  transition: all .3s ease-in-out;
+}
+
+.clients__btn:hover {
+  transition: all .3s ease-in-out;
+  background-color: #B89EFF;
+  color: var(--color-white);
+}
+
+.clients__btn:active {
+  transition: all .3s ease-in-out;
+  background-color: #8052FF;
+  color: var(--color-white);
+}
+
+.clients__btn:hover svg {
+  transition: all .3s ease-in-out;
+  fill: var(--color-white);
+}
+
+.clients__btn:active svg {
+  transition: all .3s ease-in-out;
+  fill: var(--color-white);
+}
+
+.clients__svg {
+  padding-right: 10px;
+  fill: var(--color-heliotrope);
+}
+
+.clients__svg svg {
+  transition: all .3s ease-in-out;
+}
+
+.sort-up,
+.sort-down {
+  background-repeat: no-repeat;
+}
+
+.sort-up {
+  background-image: url('../img/arrow-up.svg');
+}
+
+.sort-down {
+  background-image: url('../img/arrow-down.svg');
+}

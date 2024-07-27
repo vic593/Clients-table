@@ -1,0 +1,202 @@
+/* модальное окно */
+.modal-active {
+  animation: fade .3s ease-in-out.3s forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/close.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-mine-shaft);
+}
+
+.modal__id {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 12px;
+  color: var(--color-silver-chalice);
+  font-weight: 400;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+}
+
+.modal__label-star {
+  color: var(--color-heliotrope);
+}
+
+.form-floating {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.form-floating>label {
+  position: absolute;
+  bottom: 4px;
+  left: 3px;
+  height: 100%;
+  padding-top: 5px;
+  pointer-events: none;
+  border: 1px solid transparent;
+  transform-origin: 0 0;
+  transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+  color: var(--color-silver-chalice);
+}
+
+.form-floating>.modal__input:focus~label,
+.form-floating>.modal__input:not(:placeholder-shown)~label {
+  top: -10px;
+  transform: scale(.85) translate(.15rem, -.5rem);
+}
+
+.modal__input::placeholder {
+  font-size: 0;
+}
+
+.modal__input {
+  display: block;
+  outline: none;
+  width: 100%;
+  border: none;
+  height: 28px;
+  border-bottom: 1px solid var(--color-gray-suit);
+}
+
+.modal__form button {
+  font-weight: 600;
+}
+
+.modal__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+  margin: 0 -30px;
+  margin-bottom: 25px;
+  background-color: var(--color-gray-suit);
+}
+
+.modal__btn-contact {
+  position: relative;
+  padding-left: 19px;
+  border: none;
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url(../img/add-client.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: var(--color-mine-shaft);
+  transition: all .3s ease-in-out;
+}
+
+.modal__btn-contact:hover {
+  color: var(--color-heliotrope);
+  transition: all .3s ease-in-out;
+  background-image: url(../img/add-client-hover.svg);
+}
+
+.modal__btn-contact.modal__btn-contact-active {
+  display: flex;
+}
+
+
+.modal__btn-save {
+display: flex;
+  padding: 12px 35px;
+  align-self: center;
+  margin-bottom: 5px;
+  transition: all .3s ease-in-out;
+}
+
+.modal__btn-save:hover {
+  transition: background-color .3s ease-in-out;
+  background-color: var(--color-melrose);
+}
+
+.modal__btn-save:active {
+  transition: background-color .3s ease-in-out;
+  background-color: #8052FF;
+}
+
+.modal__btn-back {
+  font-weight: 400;
+  font-size: 12px;
+  align-self: center;
+  border-bottom: 1px solid var(--color-mine-shaft);
+  color: var(--color-mine-shaft);
+}
+
+.modal__error {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  max-width: 255px;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: -17px;
+  text-align: center;
+  align-self: center;
+  font-size: 10px;
+  color: var(--color-burnt-sienna);
+}
+
+.modal__spinner {
+  position: relative;
+  display: none;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.modal__spinner svg {
+position: absolute;
+left: 0;
+  width: 15px;
+  height: 15px;
+  animation: spinner .3s ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  stroke: var(--color-white);
+}
+
+@keyframes spinner {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

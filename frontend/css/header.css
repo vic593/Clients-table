@@ -1,0 +1,29 @@
+/* header */
+
+.header {
+  box-shadow: 0px 3.39px 5.64px 0px #B0BEC552, 0px 9.03px 27.09px 0px #B0BEC552;
+  background-color: var(--color-white);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  padding: 10px 25px;
+  max-width: 1366px;
+}
+
+.header__logo {
+  display: block;
+  margin-right: 53px;
+}
+
+.header__input {
+  min-width: 581px;
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid #33333333
+}
+
+.header__input::placeholder {
+  color: var(--color-silver-chalice)
+}
